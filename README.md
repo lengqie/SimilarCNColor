@@ -1,5 +1,5 @@
 <div align=center>
-<img src="https://github.com/lengqie//raw/master/static/scc.jpg"/>
+<img src="https://raw.githubusercontent.com/lengqie/SimilarCNColor/master/static/scc.jpg"/>
 </div>
 <div align=center>
 <img src="https://img.shields.io/badge/Python-3.8-blue"/>
