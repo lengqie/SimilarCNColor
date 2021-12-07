@@ -30,6 +30,7 @@ res.sort(key=DictSort)
 
 def Head(li: list, nb: int = 5):
     for i in range(nb):
+        li[i]["url"] = "https://encycolorpedia.cn/" + (li[i]["key"]["hex"][1:]).lower()
         print(li[i])
 
 
