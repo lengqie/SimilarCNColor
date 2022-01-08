@@ -16,7 +16,7 @@ SimilarCNColor：🌈 相似的华夏色
 ### 1.2 功能
 
 - [x]   基本功能
-- [ ]   多种输入
+- [x]   多种输入
 - [ ]   ...
 
 ## 2. 使用
@@ -42,7 +42,7 @@ SimilarCNColor：🌈 相似的华夏色
 
 ### 2.2 颜色识别
 ~~~shell
-python SimilarColor.py
+python mian.py
 ~~~
 输入rgb 示例：`111,111,111`
 
