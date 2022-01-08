@@ -42,7 +42,7 @@ SimilarCNColor：🌈 相似的华夏色
 
 ### 2.2 颜色识别
 ~~~shell
-python mian.py
+python main.py
 ~~~
 输入rgb 示例：`111,111,111`
 
