@@ -46,7 +46,9 @@ SimilarCNColor：🌈 相似的华夏色
 python main.py
 ~~~
 输入rgb 示例：`111,111,111`
+
 输入cmyk 示例：`100,10,100,10`
+
 输入rgb 示例：`#2b2b2b`
 
 ## 3. 协议

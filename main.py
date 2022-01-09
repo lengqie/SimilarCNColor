@@ -19,19 +19,10 @@ def InFilter(input_: str):
     if "," in input_ and len(input_.split(",")) == 3:
         in_type = InType.RGB
         in_color = input_.split(",")
-        for i in in_color:
-            if not i.isdigit():
-                raise Exception("unfair input")
-        in_color = [int(i) for i in in_color]
 
     elif "," in input_ and len(input_.split(",")) == 4:
         in_type = InType.CMYK
         in_color = input_.split(",")
-
-        for i in in_color:
-            if not i.isdigit():
-                raise Exception("unfair input")
-        in_color = [int(i) for i in in_color]
 
     elif input_.startswith("#"):
         in_type = InType.HEX
@@ -41,9 +32,15 @@ def InFilter(input_: str):
         # hex -> rgb
         in_color = [int(in_color[i:i + 2], 16) for i in range(0, len(in_color), 2)]
         # print(in_color)
+        return
 
     else:
         raise Exception("unfair input")
+
+    for i in in_color:
+        if not i.isdigit():
+            raise Exception("unfair input")
+    in_color = [int(i) for i in in_color]
 
 
 def GetColor(in_type_: InType):
