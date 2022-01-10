@@ -1,4 +1,5 @@
 import json
+import sys
 from enum import Enum
 
 
@@ -13,7 +14,7 @@ in_color = ""
 in_type = InType.RGB
 
 
-def InFilter(input_: str):
+def in_filter(input_: str):
     global in_type
     global in_color
     if "," in input_ and len(input_.split(",")) == 3:
@@ -43,14 +44,14 @@ def InFilter(input_: str):
     in_color = [int(i) for i in in_color]
 
 
-def GetColor(in_type_: InType):
+def get_color(in_type_: InType):
     code = ""
     rng = 0
 
     with open("color.json", "r", encoding='utf-8') as file:
-        Color = json.load(file)
+        color = json.load(file)
 
-    for i in Color:
+    for i in color:
         if in_type_ == InType.RGB:
             code = "rgb"
             rng = 3
@@ -71,21 +72,26 @@ def GetColor(in_type_: InType):
             }
         )
 
-    res.sort(key=DictSort)
+    res.sort(key=dict_sort)
 
 
-def DictSort(ele: dict) -> int:
+def dict_sort(ele: dict) -> int:
     return ele["val"]
 
 
-def Head(li: list, nb: int = 5):
+def head(li: list, nb: int = 5):
     for i in range(nb):
         li[i]["url"] = "https://encycolorpedia.cn/" + (li[i]["key"]["hex"][1:]).lower()
         print(li[i])
 
 
+def add_color(colors: str):
+    pass
+
+
 if __name__ == '__main__':
+    # var = sys.argv[1:]
     in_color = input("please input the RGX or CMYk or HEX：")
-    InFilter(in_color)
-    GetColor(in_type)
-    Head(res, 5)
+    in_filter(in_color)
+    get_color(in_type)
+    head(res, 5)
