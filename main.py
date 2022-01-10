@@ -85,13 +85,22 @@ def head(li: list, nb: int = 5):
         print(li[i])
 
 
-def add_color(colors: str):
+def add_color(path: str):
     pass
 
 
-if __name__ == '__main__':
-    # var = sys.argv[1:]
+def scc():
+    global in_color
+
     in_color = input("please input the RGX or CMYk or HEX：")
     in_filter(in_color)
     get_color(in_type)
     head(res, 5)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        scc()
+    else:
+        # parsing argv
+        pass
