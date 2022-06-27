@@ -53,6 +53,12 @@ python main.py
 
 输入rgb 示例：`#2b2b2b`
 
+### 2.3 屏幕获取
+~~~shell
+python screen_put.py
+~~~
+
+
 ## 3 添加颜色
 ~~~shell
 python main.py
