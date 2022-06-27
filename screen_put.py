@@ -1,6 +1,6 @@
 import time
 import pyautogui as pg
-from main import get_color, InType
+from main import get_color, InType, scc_screen
 
 try:
     print("Enter <Ctrl>+C to exit:")
@@ -22,8 +22,8 @@ try:
         pre_pos = pos
         pre_rgb = rgb
 
-        # get name
-        # .....
+        # get color
+        # color = (scc_screen(rgb))
 
         # output
         print("Mouse position: ", end='')
@@ -31,7 +31,7 @@ try:
         print("RGB: ", end='')
         print(rgb)
         print("Color: ", end='')
-        print(rgb)
+        # print(color)
 
 except KeyboardInterrupt:
     exit('\n Bye.\n')

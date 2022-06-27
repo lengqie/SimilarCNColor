@@ -17,6 +17,7 @@ in_type = InType.RGB
 def in_filter(input_: str):
     global in_type
     global in_color
+    input_ = input_.replace(" ", "")
     if "," in input_ and len(input_.split(",")) == 3:
         in_type = InType.RGB
         in_color = input_.split(",")
@@ -96,6 +97,14 @@ def scc():
     in_filter(in_color)
     get_color(in_type)
     head(res, 5)
+
+
+def scc_screen(screen_put_rgb: str):
+    global in_color
+    in_color = screen_put_rgb
+    get_color(InType.RGB)
+    head(res, 5)
+    return "Test"
 
 
 if __name__ == '__main__':
