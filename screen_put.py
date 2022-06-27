@@ -23,7 +23,7 @@ try:
         pre_rgb = rgb
 
         # get color
-        # color = (scc_screen(rgb))
+        color = (scc_screen(rgb))
 
         # output
         print("Mouse position: ", end='')
@@ -31,7 +31,7 @@ try:
         print("RGB: ", end='')
         print(rgb)
         print("Color: ", end='')
-        # print(color)
+        print(color)
 
 except KeyboardInterrupt:
     exit('\n Bye.\n')

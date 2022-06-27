@@ -48,6 +48,9 @@ def in_filter(input_: str):
 def get_color(in_type_: InType):
     code = ""
     rng = 0
+    # reset result
+    global res
+    res = []
 
     with open("color.json", "r", encoding='utf-8') as file:
         color = json.load(file)
@@ -102,9 +105,9 @@ def scc():
 def scc_screen(screen_put_rgb: str):
     global in_color
     in_color = screen_put_rgb
+    in_filter(in_color)
     get_color(InType.RGB)
-    head(res, 5)
-    return "Test"
+    return res[0]["key"]["name"]
 
 
 if __name__ == '__main__':
